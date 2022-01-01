@@ -7,6 +7,7 @@ function onEdit(td) {
     document.getElementById("NoCountry").value = selectedRow.cells[3].innerHTML;
 }
 function updateRecord(formData) {
+    //Here I`m updating them
     selectedRow.cells[0].innerHTML = formData.Nationality;
     selectedRow.cells[1].innerHTML = formData.age;
     selectedRow.cells[2].innerHTML = formData.dream;
