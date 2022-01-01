@@ -1,4 +1,5 @@
 function onEdit(td) {
+    //This function I will be able to edit my elements
     selectedRow = td.parentElement.parentElement;
     document.getElementById("Nationality").value = selectedRow.cells[0].innerHTML;
     document.getElementById("age").value = selectedRow.cells[1].innerHTML;

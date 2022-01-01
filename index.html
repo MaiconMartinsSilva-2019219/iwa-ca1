@@ -13,10 +13,11 @@
 <body>
     <h1>Bucket List :<small>Where would you like to go?</small></h1>
    
-
+<!--I created a table  with some labels and input text fields -->
     <table>
         <tr>
             <td>
+                <!--I created a function called "onFormSubmit" in my js/add.js-->
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
                     <div>
                         <label>Nationality*</label><label class="validation-error hide" id="NationalityNameValidationError">This field is required.</label>
@@ -40,6 +41,7 @@
                 </form>
             </td>
             <td>
+                <!--Another table will be displayed with the input text from the user-->
                 <table class="list" id="BucketList">
                     <thead>
                         <tr>
