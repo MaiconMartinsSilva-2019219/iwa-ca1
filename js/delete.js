@@ -7,7 +7,7 @@ function onDelete(td) {
         resetForm();
     }
 }
-//Here I`m catching some errors, in case you try to submit without telling me 
+//Here I`m doing some validations for security reasons, in case you try to submit without telling me 
 //your Nationality you wont be able to submit, the field 'Natioanality'is mandatory
 //if not filled , you won`t be able to proceed
 
