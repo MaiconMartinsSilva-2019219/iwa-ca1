@@ -1,23 +1,32 @@
+
+body{background-image: url('img/world.jpg');}
+
+body > h1{
+  
+color: lightyellow;
+
+
+}
 body > table{
    
     width: 100%;background:transparent;
     position:relative; 
     top:100px;
     
-   
-    
 }
+
 
 
 table{
     border-collapse: collapse;
+    background-color: lightskyblue
     
   
 }
 table.list{
     width:100%;
     position:relative; 
-     top:-165px;
+     
     
      
 }
