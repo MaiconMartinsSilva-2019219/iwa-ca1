@@ -1,5 +1,6 @@
 function onDelete(td) {
-    //This function I`m deleting the elements in the rows, also a confirmation message will be shown to confirm that
+    //This function I`m deleting the elements in the rows,
+    //also a confirmation message will be shown to confirm that
     //the row will be deleted. 
     if (confirm('Are you sure to delete this record ?')) {
         row = td.parentElement.parentElement;
@@ -7,7 +8,8 @@ function onDelete(td) {
         resetForm();
     }
 }
-//Here I`m doing some validations for security reasons, in case you try to submit without telling me 
+//Here I`m doing some validations for security reasons,
+//incase you try to submit without telling the program
 //your Nationality you wont be able to submit, the field 'Natioanality'is mandatory
 //if not filled , you won`t be able to proceed
 
