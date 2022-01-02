@@ -3,21 +3,24 @@
 
 <head>
     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         Html CRUD with js
     </title>
+    <!--Linking my styling -->
     <link rel="stylesheet" href="pretty.css">
 </head>
 
 <body>
     <h1>Bucket List :<small>Where would you like to go?</small></h1>
-   
-<!--I created a table  with some labels and input text fields -->
+
+    <!--I created a table  with some labels and input text fields,This is just the 
+    structure of how it will look like -->
     <table>
         <tr>
             <td>
-                <!--I created a function called "onFormSubmit" in my js/add.js-->
+                <!--Here I`m using a function called "onFormSubmit" that is located
+                     in my js/add.js, I explain more about this function in the add.js file-->
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
                     <div>
                         <label>Nationality*</label><label class="validation-error hide" id="NationalityNameValidationError">This field is required.</label>
@@ -35,7 +38,7 @@
                         <label>Country you don`t wanna visit</label>
                         <input type="text" name="NoCountry" id="NoCountry">
                     </div>
-                    <div  class="form-action-buttons">
+                    <div class="form-action-buttons">
                         <input type="submit" value="Submit">
                     </div>
                 </form>
@@ -59,10 +62,11 @@
             </td>
         </tr>
     </table>
-    <script src="js/add.js"></script>
+    <!--Here I`m calling all the CRUD js functions. <script src="js/add.js">-->
+    </script>
     <script src="js/edit.js"></script>
     <script src="js/delete.js"></script>
-  
+
 </body>
 
 </html>

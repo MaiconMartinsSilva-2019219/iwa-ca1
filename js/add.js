@@ -13,7 +13,7 @@ function onFormSubmit() {
         resetForm();
     }
 }
-
+//This function will read the data
 function readFormData() {
     //Defining a variable formData, where we gonna access the values of the elements by ID.
     var formData = {};
@@ -29,21 +29,32 @@ function insertNewRecord(data) {
     //my second table.
     var table = document.getElementById("BucketList").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
+
+    //in the cell position '0' I want add the data that was typed in the 'Nationality field'
     cell1 = newRow.insertCell(0);
     cell1.innerHTML = data.Nationality;
+
+    //in the cell position '1' I want add the data that was typed in the 'age' field'
     cell2 = newRow.insertCell(1);
     cell2.innerHTML = data.age;
+
+    //in the cell position '2' I want add the data that was typed in the 'dream' field'
     cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.dream;
+
+    //in the cell position '3' I want add the data that was typed in the 'NoCountry field'
     cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.NoCountry;
+
+    //in the cell position '4' I want add the buttons 'Edit'and 'Delete'
     cell4 = newRow.insertCell(4);
     cell4.innerHTML =
-    //I`m adding an event onclick, so in this way I wanna my function 'onEdit' to happen
-    //when the button is clicked, and I did pretty much the same for the 'onDelete'function
-    `<a onClick="onEdit(this)">Edit</a>
+        //I`m adding an event onclick, so in this way I wanna my function 'onEdit' to happen
+        //when the button is clicked, and I did pretty much the same for the 'onDelete'function
+        `<a onClick="onEdit(this)">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
 }
+
 function resetForm() {
     //Once the values has been submited I wanted my fields to be empty, in order to add
     //more information. 
