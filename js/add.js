@@ -1,7 +1,7 @@
 //just declaring the my initial row will be null
 var selectedRow = null
 
-function onFormSubmit() {
+function SubmitForm() {
     //I`m using this if else statement to tell my program that if row is empty, nothing will be added
     //in case the submit button is pressed, Otherwise the form will be updated.
     if (validate()) {
@@ -17,10 +17,10 @@ function onFormSubmit() {
 function readFormData() {
     //Defining a variable formData, where we gonna access the values of the elements by ID.
     var formData = {};
-    formData["Nationality"] = document.getElementById("Nationality").value;
+    formData["Name"] = document.getElementById("Name").value;
     formData["age"] = document.getElementById("age").value;
+    formData["nationality"] = document.getElementById("nationality").value;
     formData["dream"] = document.getElementById("dream").value;
-    formData["NoCountry"] = document.getElementById("NoCountry").value;
     return formData;
 }
 
@@ -30,37 +30,37 @@ function insertNewRecord(data) {
     var table = document.getElementById("BucketList").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
 
-    //in the cell position '0' I want add the data that was typed in the 'Nationality field'
+    //in the cell position '0' I want add the data that was typed in the 'Name' field'
     cell1 = newRow.insertCell(0);
-    cell1.innerHTML = data.Nationality;
+    cell1.innerHTML = data.Name;
 
     //in the cell position '1' I want add the data that was typed in the 'age' field'
     cell2 = newRow.insertCell(1);
     cell2.innerHTML = data.age;
 
-    //in the cell position '2' I want add the data that was typed in the 'dream' field'
+    //in the cell position '2' I want add the data that was typed in the 'nationality' field'
     cell3 = newRow.insertCell(2);
-    cell3.innerHTML = data.dream;
+    cell3.innerHTML = data.nationality;
 
-    //in the cell position '3' I want add the data that was typed in the 'NoCountry field'
+    //in the cell position '3' I want add the data that was typed in the 'dream field'
     cell4 = newRow.insertCell(3);
-    cell4.innerHTML = data.NoCountry;
+    cell4.innerHTML = data.dream;
 
     //in the cell position '4' I want add the buttons 'Edit'and 'Delete'
     cell4 = newRow.insertCell(4);
     cell4.innerHTML =
-        //I`m adding an event onclick, so in this way I wanna my function 'onEdit' to happen
+        //I`m adding an event onclick, so in this way I wanna my function 'Edit' to happen
         //when the button is clicked, and I did pretty much the same for the 'onDelete'function
-        `<a onClick="onEdit(this)">Edit</a>
-                       <a onClick="onDelete(this)">Delete</a>`;
+        `<a onClick="Edit(this)">Edit</a>
+                       <a onClick="Delete(this)">Delete</a>`;
 }
 
 function resetForm() {
     //Once the values has been submited I wanted my fields to be empty, in order to add
     //more information. 
-    document.getElementById("Nationality").value = "";
+    document.getElementById("Name").value = "";
     document.getElementById("age").value = "";
+    document.getElementById("nationality").value = "";
     document.getElementById("dream").value = "";
-    document.getElementById("NoCountry").value = "";
     selectedRow = null;
 }

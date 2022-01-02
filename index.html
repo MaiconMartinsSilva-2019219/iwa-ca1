@@ -21,22 +21,24 @@
             <td>
                 <!--Here I`m using a function called "onFormSubmit" that is located
                      in my js/add.js, I explain more about this function in the add.js file-->
-                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                <form onsubmit="event.preventDefault();SubmitForm();" autocomplete="off">
                     <div>
-                        <label>Nationality*</label><label class="validation-error hide" id="NationalityNameValidationError">This field is required.</label>
-                        <input type="text" name="Nationality" id="Nationality">
+                        <!--SECURITY MEASURE,  an error msg will be shown
+                        if you don`t give your name.-->
+                        <label>Name*</label><label class="validation-error hide" id="NameValidationError">This field is required.</label>
+                        <input type="text" name="Name" id="Name">
                     </div>
                     <div>
                         <label>Age</label>
                         <input type="text" name="age" id="age">
                     </div>
                     <div>
-                        <label>Dream Country to be visited</label>
-                        <input type="text" name="dream" id="dream">
+                        <label>Nationality</label>
+                        <input type="text" name="nationality" id="nationality">
                     </div>
                     <div>
-                        <label>Country you don`t wanna visit</label>
-                        <input type="text" name="NoCountry" id="NoCountry">
+                        <label>Dream Country</label>
+                        <input type="text" name="dream" id="dream">
                     </div>
                     <div class="form-action-buttons">
                         <input type="submit" value="Submit">
@@ -48,10 +50,10 @@
                 <table class="list" id="BucketList">
                     <thead>
                         <tr>
-                            <th>Nationality</th>
+                            <th>Name</th>
                             <th>Age</th>
+                            <th>Nationalityy</th>
                             <th>Dream Country</th>
-                            <th>Not my dream</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -62,8 +64,8 @@
             </td>
         </tr>
     </table>
-    <!--Here I`m calling all the CRUD js functions. <script src="js/add.js">-->
-    </script>
+    <!--Here I`m calling all the CRUD js functions. -->
+    <script src="js/add.js"></script>
     <script src="js/edit.js"></script>
     <script src="js/delete.js"></script>
 
