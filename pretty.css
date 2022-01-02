@@ -1,14 +1,29 @@
-body {
-    background-image: url('img/world.jpg');
+html {
+    /* Some styling for my main page, I would like to reference the image
+    that I got from, https://unsplash.com*/
+    min-height: 100%;
+    background-image: url('img/travel.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 body>h1 {
+    /* stying  h1*/
+    color: #b48608;
+    font-family: 'Droid serif', serif;
+    font-size: 46px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 44px;
+    margin: 0 0 12px;
+    text-align: center;
 
-    color: lightyellow;
 }
 
 body>table {
-
+    /* Styling my table, I made it transparent so the main image can be seen through the table
+    I thought that you give a nice looking to my page*/
     width: 100%;
     background: transparent;
     position: relative;
@@ -21,12 +36,12 @@ table {
     background-color: lightskyblue
 }
 
-table.list {
+/*Bellow some general styling for the inputs and, table and the validation error msg*/
+
+
+.hide.list {
     width: 100%;
     position: relative;
-
-
-
 }
 
 td,
@@ -34,8 +49,6 @@ th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
-
-
 }
 
 tr:nth-child(even),
