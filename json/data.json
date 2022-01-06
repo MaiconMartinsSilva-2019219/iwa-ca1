@@ -1,0 +1,42 @@
+"label": [
+    "Name*",
+    {
+        "@class": "validation-error hide",
+        "@id": "NameValidationError",
+        "#text": "This field is required."
+    }
+],
+"input": {
+    "@type": "text",
+    "@name": "Name",
+    "@id": "Name"
+}
+}, {
+    "label": "Age",
+    "input": {
+        "@type": "text",
+        "@name": "age",
+        "@id": "age"
+    }
+}, {
+    "label": "Nationality",
+    "input": {
+        "@type": "text",
+        "@name": "nationality",
+        "@id": "nationality"
+    }
+}, {
+    "label": "Dream Country",
+    "input": {
+        "@type": "text",
+        "@name": "dream",
+        "@id": "dream"
+    }
+}, {
+    "@class": "form-action-buttons",
+    "input": {
+        "@type": "submit",
+        "@value": "Submit"
+    }
+}
+]
